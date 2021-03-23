@@ -1,0 +1,36 @@
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F2B138;
+    height: 100%;
+}
+
+input{
+    border: solid black ;
+    border-radius: 5px;
+    width: 600px;
+    height: 30px;
+    margin: 30px;
+
+}
+
+button{
+    background-color: #506AD4;
+    height: 40px;
+    width: 100px;
+    border: solid black ;
+    border-radius: 5px;
+    color: white;
+}
+
+button:hover{
+    background-color: white;
+    color: black;
+}
+
+.logo{
+    height: 200px;
+    width: auto;
+}
