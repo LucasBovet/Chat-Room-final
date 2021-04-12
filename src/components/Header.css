@@ -1,21 +1,20 @@
 .top-header{
     width: 100%;
     height: 150px;
-    background-color: #F2B138;
     border: solid black ;
 }
 
 .bottom-header{
     width: 100%;
     height: 100px;
-    background-color: #506AD4;
+
     border-top: none;
     border-bottom: solid black;
     border-right: solid black;
     border-left: solid black;
 }
 
-.logo{
+.logo-1{
     display: flex;
     margin-left: auto;
     margin-right: auto;

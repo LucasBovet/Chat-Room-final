@@ -5,12 +5,9 @@ const Header = () => {
     return(
         <>
         <div className='top-header'>
-            <img src={ChatLogo} className='logo'/>
+            <img src={ChatLogo} className='logo-1'/>
         </div>
-        <div className='bottom-header'>
-
-        </div>
-
+      
         </>
        
     );

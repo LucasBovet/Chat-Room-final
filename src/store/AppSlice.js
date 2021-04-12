@@ -16,4 +16,4 @@ const AppSlice = createSlice ({
   })
 
   export const{LoginUser, LogoutUser} = AppSlice.actions
-  export default AppSlice.reducer
+  export default AppSlice.reducer 

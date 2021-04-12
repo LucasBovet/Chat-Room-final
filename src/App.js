@@ -1,7 +1,10 @@
 import ChatLayout from './components/ChatLayout'
-import Login from './components/Login'
+import  Login from './components/Login'
 import store from './store'
 import { Provider, useSelector } from 'react-redux'
+import io from 'socket.io-client'
+
+window.socket = io('');
 
 
 function App() {
@@ -26,9 +29,13 @@ function App() {
 
 function AppContainer() {
   return (
-    <Provider store={store}>
-      <App />
-    </Provider>
+
+      <Provider store={store}>
+
+        <App />
+
+      </Provider>
+    
   )
 }
 
