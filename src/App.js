@@ -1,13 +1,12 @@
 import ChatLayout from './components/ChatLayout'
-import  Login from './components/Login'
+import Login from './components/Login'
 import store from './store'
 import { Provider, useSelector } from 'react-redux'
-import io from 'socket.io-client'
 
-window.socket = io('');
 
 
 function App() {
+
 
   const { user } = useSelector(state => state.app)
 
@@ -30,12 +29,12 @@ function App() {
 function AppContainer() {
   return (
 
-      <Provider store={store}>
+    <Provider store={store}>
 
-        <App />
+      <App />
 
-      </Provider>
-    
+    </Provider>
+
   )
 }
 

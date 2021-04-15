@@ -1,5 +1,9 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
+import WebSocketProvider from '../WebSocketContext';
+import io from 'socket.io-client';
 import './Body.css'
+
+window.socket = io('');
 
 const Body = () => {
 
@@ -47,4 +51,12 @@ const Body = () => {
 
 };
 
-export default Body;
+const BodyConatiner = () => {
+    return(
+        <WebSocketProvider>
+            <Body />
+        </WebSocketProvider>
+    )
+}
+
+export default BodyConatiner;

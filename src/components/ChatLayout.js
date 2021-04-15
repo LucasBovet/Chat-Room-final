@@ -9,15 +9,20 @@ const ChatLayout = () => {
 
 
 
+            <div style={
+                {
+                    overflow: 'hidden'
+                }
+            }>
 
 
+                <Header />
 
-            <Header />
-
-            <Body />
+                <Body />
 
 
-            <Footer />
+                <Footer />
+            </div>
 
 
         </>
