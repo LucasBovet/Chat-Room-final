@@ -5,7 +5,7 @@ const Header = () => {
     return(
         <>
         <div className='top-header'>
-            <img src={ChatLogo} className='logo-1'/>
+            <img src={ChatLogo} className='logo-1' alt="Logo"/>
         </div>
       
         </>

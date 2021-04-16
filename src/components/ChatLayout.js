@@ -1,9 +1,13 @@
 import Header from './Header';
 import Body from './Body';
 import Footer from './Footer';
+import {useSelector} from 'react-redux';
+import WebSocketProvider from '../WebSocketContext';
 
 
 const ChatLayout = () => {
+    const token = localStorage.getItem('chat-room')
+    const username = useSelector(state=>state.app.user)
     return (
         <>
 
@@ -17,11 +21,13 @@ const ChatLayout = () => {
 
 
                 <Header />
+                <WebSocketProvider username={username} token={token}>
 
-                <Body />
+                    <Body />
 
 
-                <Footer />
+                    <Footer />
+                </WebSocketProvider>
             </div>
 
 

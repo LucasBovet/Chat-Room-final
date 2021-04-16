@@ -1,8 +1,10 @@
 import './Footer.css'
+
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import { makeStyles } from '@material-ui/core/styles'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
+import {WebSocketContext} from '../WebSocketContext';
 
 
 
@@ -21,6 +23,7 @@ const useStyle = makeStyles({
 });
 
 const Footer = () => {
+    const { socket } = useContext(WebSocketContext)
     const classes = useStyle()
     const [message, setMessage] = useState('');
     return (
@@ -47,7 +50,7 @@ const Footer = () => {
                     onKeyPress={e => {
                         if (e.code === 'Enter') {
                             e.preventDefault();
-                            window.socket.emit('nouveau-message', message);
+                            socket.emit('nouveau-message', message);
 
                             setMessage('');
                         }
@@ -57,7 +60,7 @@ const Footer = () => {
                 <Button
                     onClick={e => {
                         e.preventDefault();
-                        window.socket.emit('nouveau-message', message);
+                        socket.emit('nouveau-message', message);
 
                         setMessage('');
                     }}

@@ -48,7 +48,7 @@ const Login = () => {
         });
         const res = await req.json();
 
-        localStorage.setItem('testapp-auth', res.token);
+        localStorage.setItem('chat-room', res.token);
         dispatch(LoginUser(res.user));
     };
 
@@ -57,7 +57,7 @@ const Login = () => {
     return (
         <>
 
-            <img src={ChatLogo} className='logo' />
+            <img src={ChatLogo} className='logo' alt="Logo" />
 
             <Paper className={classes.root} elevation={4} variant='outlined'>
                 <Box mb={3}>
